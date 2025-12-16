@@ -72,6 +72,8 @@ while rodando:
     for asteroide in colisoes:
         asteroide.kill()
         Game_Over(tela, LARGURA, ALTURA)
+        pygame.mixer.music.stop()
 
 pygame.quit()
+
 
