@@ -6,7 +6,7 @@ class Nave(pygame.sprite.Sprite):
         super().__init__()
 
         self.imagemfundo = pygame.image.load(
-            "Jogo-IP/Sprites/Nave.png"
+            "Sprites/Nave.png"
         ).convert_alpha()
 
         self.image = pygame.transform.scale(self.imagemfundo, (150, 150))
@@ -43,6 +43,7 @@ class Nave(pygame.sprite.Sprite):
             self.tempo_tiro = agora
             self.somtiro.set_volume(0.2)
             self.somtiro.play()
+
 
 
 
