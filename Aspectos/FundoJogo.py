@@ -22,7 +22,7 @@ class Fundo:
         )
 
         pygame.mixer.init()
-        pygame.mixer.music.load("Novojogo.py/Sons/MusicaFundo.mp3")
+        pygame.mixer.music.load("Jogo-IP/Sons/MusicaFundo.mp3")
         pygame.mixer.music.set_volume(0.20)
         pygame.mixer.music.play (-1)
 
@@ -38,6 +38,7 @@ class Fundo:
             brilho = 120 + e[2] * 20
             pygame.draw.circle(self.tela, (brilho, brilho, brilho), (e[0], e[1]), 1)
     
+
 
 
 
