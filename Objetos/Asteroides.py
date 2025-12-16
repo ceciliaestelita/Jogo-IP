@@ -9,7 +9,7 @@ class Asteroide(pygame.sprite.Sprite):
 
         # Carrega a sprite (usa a do Alien como asteroide)
         self.image = pygame.image.load(
-            "Jogo-IP/Sprites/Alien.png"
+            "Sprites/Alien.png"
         ).convert_alpha()
 
         # Escala opcional (ajuste se quiser)
@@ -55,5 +55,6 @@ class Asteroide(pygame.sprite.Sprite):
 
     def fora_da_tela(self):
         return self.rect.top > self.altura_tela
+
 
 
