@@ -16,7 +16,7 @@ pygame.display.set_caption("Em uma galáxia muito muito distante")
 
 # ---------------------------------------------------------------------------
 # Sons
-som_impacto = pygame.mixer.Sound("Jogo-IP/Sons/Impacto.wav")
+som_impacto = pygame.mixer.Sound("Sons/Impacto.wav")
 
 # ---------------------------------------------------------------------------
 # Chamada do fundo e da nave
@@ -75,4 +75,5 @@ while rodando:
 
 
 pygame.quit()
+
 
