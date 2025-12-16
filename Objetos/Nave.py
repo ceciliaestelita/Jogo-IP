@@ -19,7 +19,7 @@ class Nave(pygame.sprite.Sprite):
         self.tempo_tiro = 0
         self.delay_tiro = 300  # ms
 
-        self.somtiro = pygame.mixer.Sound("NovoJogo.py/Sons/SomLaser.wav")
+        self.somtiro = pygame.mixer.Sound("Sons/SomLaser.wav")
 
     def update(self, teclas):
         if teclas[pygame.K_a] or teclas[pygame.K_LEFT]:
@@ -43,6 +43,7 @@ class Nave(pygame.sprite.Sprite):
             self.tempo_tiro = agora
             self.somtiro.set_volume(0.2)
             self.somtiro.play()
+
 
 
 
