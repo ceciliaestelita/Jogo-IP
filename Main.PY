@@ -1,8 +1,8 @@
 import pygame
 from Objetos.Nave import Nave
-from AspectosdoJogo.FundoJogo import Fundo
+from Aspectos.FundoJogo import Fundo
 from Objetos.Asteroides import Asteroide
-from Telas.Telainicial import Mostrar_tela_inicial
+from Tela.Telainicial import Mostrar_tela_inicial
 import sys
 
 # ---------------------------------------------------------------------------
@@ -72,5 +72,6 @@ while rodando:
 
     pygame.display.flip()
     clock.tick(60)
+
 
 pygame.quit()
