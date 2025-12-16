@@ -5,7 +5,7 @@ class Tiro(pygame.sprite.Sprite):
         super().__init__()
 
         self.image = pygame.image.load(
-            "Novojogo.py/Sprites/Tiro.png"
+            "Jogo-IP/Sprites/Tiro.png"
         ).convert_alpha()
 
         self.image = pygame.transform.scale(self.image, (60, 90))
@@ -20,3 +20,4 @@ class Tiro(pygame.sprite.Sprite):
 
         if self.rect.bottom < 0:
             self.kill()
+
