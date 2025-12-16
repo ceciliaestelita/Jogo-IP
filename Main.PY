@@ -3,7 +3,7 @@ from Objetos.Nave import Nave
 from Aspectos.FundoJogo import Fundo
 from Objetos.Asteroides import Asteroide
 from Tela.Telainicial import Mostrar_tela_inicial
-import sys
+from Tela.TelaGameOver import Game_Over
 
 # ---------------------------------------------------------------------------
 pygame.init()
@@ -14,15 +14,14 @@ ALTURA = info.current_h
 tela = pygame.display.set_mode((LARGURA, ALTURA), pygame.FULLSCREEN)
 pygame.display.set_caption("Em uma galáxia muito muito distante")
 
+Mostrar_tela_inicial(tela, LARGURA, ALTURA)
 # ---------------------------------------------------------------------------
 # Sons
 som_impacto = pygame.mixer.Sound("Sons/Impacto.wav")
-
 # ---------------------------------------------------------------------------
 # Chamada do fundo e da nave
 fundo = Fundo(tela, LARGURA, ALTURA)
 nave = Nave(LARGURA // 2, ALTURA)
-
 # ---------------------------------------------------------------------------
 # Grupos
 grupo_nave = pygame.sprite.Group(nave)
@@ -31,10 +30,6 @@ Grupoasteroides = pygame.sprite.Group()
 
 TempoAsteroide = pygame.USEREVENT + 1
 pygame.time.set_timer(TempoAsteroide, 500)
-
-# ---------------------------------------------------------------------------
-# Tela inicial
-Mostrar_tela_inicial(tela, LARGURA, ALTURA)
 
 # ---------------------------------------------------------------------------
 # Main loop
@@ -73,7 +68,9 @@ while rodando:
     pygame.display.flip()
     clock.tick(60)
 
+    colisoes = pygame.sprite.spritecollide(nave, Grupoasteroides, True)
+    for asteroide in colisoes:
+        asteroide.kill()
+        Game_Over(tela, LARGURA, ALTURA)
 
 pygame.quit()
-
-
