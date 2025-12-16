@@ -1,6 +1,6 @@
 import pygame
 import random
-from AspectosdoJogo.Cores import *
+from Aspectos.Cores import *
 
 class Fundo:
     def __init__(self, tela, largura, altura):
@@ -38,6 +38,7 @@ class Fundo:
             brilho = 120 + e[2] * 20
             pygame.draw.circle(self.tela, (brilho, brilho, brilho), (e[0], e[1]), 1)
     
+
 
 
 
