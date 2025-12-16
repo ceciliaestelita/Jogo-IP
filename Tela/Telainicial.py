@@ -2,7 +2,9 @@ import pygame
 import sys
 
 def Mostrar_tela_inicial(tela, largura, altura):
-    """Mostra a tela inicial até o jogador apertar ENTER"""
+    LyodaPODEROSOBLASTER = pygame.mixer.Sound("Sons/Lyoda.mp3")
+    LyodaPODEROSOBLASTER.play()
+    
     tela_inicial_img = pygame.image.load("Sprites/TelaInicial.jpeg").convert()
     tela_inicial_img = pygame.transform.scale(tela_inicial_img, (largura, altura))
 
@@ -21,6 +23,7 @@ def Mostrar_tela_inicial(tela, largura, altura):
         tela.blit(tela_inicial_img, (0, 0))
         pygame.display.flip()
         clock.tick(60)
+
 
 
 
