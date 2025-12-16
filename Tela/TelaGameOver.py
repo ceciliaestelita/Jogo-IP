@@ -2,10 +2,6 @@ import pygame
 import sys
 
 def Game_Over(tela, largura, altura):
-
-    LyodaPODEROSOBLASTER = pygame.mixer.Sound("Sons/Lyoda.mp3")
-    LyodaPODEROSOBLASTER.play()
-    
     Tela_Game_Over = pygame.image.load("Sprites/TelaGameOver.jpg").convert()
     Tela_Game_Over = pygame.transform.scale(Tela_Game_Over, (largura, altura))
 
