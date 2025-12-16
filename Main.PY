@@ -74,3 +74,4 @@ while rodando:
         Game_Over(tela, LARGURA, ALTURA)
 
 pygame.quit()
+
