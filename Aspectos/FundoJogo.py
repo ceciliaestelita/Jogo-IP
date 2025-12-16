@@ -14,7 +14,7 @@ class Fundo:
                 self.estrelas.append([random.randint(0, self.largura), random.randint(0, self.altura), velocidade])
 
         self.imagemfundo = pygame.image.load(
-            "Sprites/Galáxia.png"
+            "Jogo-IP/Sprites/Galáxia.png"
         ).convert_alpha()
 
         self.imagem = pygame.transform.scale(
@@ -38,6 +38,7 @@ class Fundo:
             brilho = 120 + e[2] * 20
             pygame.draw.circle(self.tela, (brilho, brilho, brilho), (e[0], e[1]), 1)
     
+
 
 
 
