@@ -40,13 +40,13 @@ TempoAsteroide = pygame.USEREVENT + 1
 pygame.time.set_timer(TempoAsteroide, 500)
 
 TempoEstrela = pygame.USEREVENT + 2
-pygame.time.set_timer(TempoEstrela, 500)
+pygame.time.set_timer(TempoEstrela, 1000)
 
 TempoC3PO = pygame.USEREVENT + 3
-pygame.time.set_timer(TempoC3PO, 500)
+pygame.time.set_timer(TempoC3PO, 5000)
 
 TempoR2D2 = pygame.USEREVENT + 4
-pygame.time.set_timer(TempoR2D2, 500)
+pygame.time.set_timer(TempoR2D2, 5000)
 
 # ---------------------------------------------------------------------------
 quantidade_estrelas = 0
@@ -143,4 +143,5 @@ while rodando:
         sys.exit()
 
 pygame.quit()
+
 
