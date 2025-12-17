@@ -15,7 +15,6 @@ Galeria de Fotos:
 <img width="1920" height="1080" alt="{9F3732E3-EA11-4DAF-8CD5-9E36E723CEC0}" src="https://github.com/user-attachments/assets/2c936a8e-1dac-4987-bdcd-9d2f3ee35707" />
 <img width="1920" height="1080" alt="{653647FC-CCB4-455B-BB9E-B24FECD8F22D}" src="https://github.com/user-attachments/assets/b70580da-1edf-498c-8fda-7bb47f770530" />
 <img width="1920" height="1080" alt="{5DC58F67-BEF9-4533-95D2-CBA296AA1C3B}" src="https://github.com/user-attachments/assets/ce62c86c-f4fc-4cb8-96c6-c99f7d144fc6" />
-<img width="490" height="354" alt="image" src="https://github.com/user-attachments/assets/5008668e-6fc0-4b2d-9252-3929e3227d56" />
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Galerias usadas:
 - ''Random''
