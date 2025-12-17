@@ -23,6 +23,7 @@ Mostrar_tela_inicial(tela, LARGURA, ALTURA)
 som_impacto = pygame.mixer.Sound("Sons/Impacto.wav")
 som_estrela_obtida = pygame.mixer.Sound("Sons/Estrelasom.mp3")
 C3PO_obtido = pygame.mixer.Sound("Sons/C3POsom.mp3")
+R2D2_obtido = pygame.mixer.Sound("Sons/R2D2som.mp3")
 # ---------------------------------------------------------------------------
 # Chamada do fundo e da nave
 fundo = Fundo(tela, LARGURA, ALTURA)
@@ -127,7 +128,8 @@ while rodando:
     colisoes_r2d2 = pygame.sprite.spritecollide(nave, grupo_r2d2, True)
     for r2d2 in colisoes_r2d2:
         r2d2.kill() # Remove o r2d2 da tela
-        quantidade_r2d2 += 1 # Incrementa o contador
+        quantidade_r2d2 += 1 
+        R2D2_obtido.play()
     # ----- x -------
     # Colisão nave x asteroide ---
     colisoes = pygame.sprite.spritecollide(nave, Grupoasteroides, True)
