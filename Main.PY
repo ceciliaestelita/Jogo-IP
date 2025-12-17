@@ -4,6 +4,7 @@ from Aspectos.FundoJogo import Fundo
 from Objetos.Asteroides import Asteroide
 from Tela.Telainicial import Mostrar_tela_inicial
 from Tela.TelaGameOver import Game_Over
+import sys
 
 # ---------------------------------------------------------------------------
 pygame.init()
@@ -71,9 +72,9 @@ while rodando:
     colisoes = pygame.sprite.spritecollide(nave, Grupoasteroides, True)
     for asteroide in colisoes:
         asteroide.kill()
-        Game_Over(tela, LARGURA, ALTURA)
         pygame.mixer.music.stop()
+        Game_Over(tela, LARGURA, ALTURA)
+        pygame.quit()
+        sys.exit()
 
 pygame.quit()
-
-
