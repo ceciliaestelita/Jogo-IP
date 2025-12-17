@@ -14,7 +14,7 @@ class Nave(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.midbottom = (x, altura - 20)
 
-        self.velocidade = 8
+        self.velocidade = 10
 
         self.tempo_tiro = 0
         self.delay_tiro = 300  # ms
@@ -43,6 +43,7 @@ class Nave(pygame.sprite.Sprite):
             self.tempo_tiro = agora
             self.somtiro.set_volume(0.2)
             self.somtiro.play()
+
 
 
 
