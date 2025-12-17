@@ -1,63 +1,142 @@
-Relatório JogoIP - Uma galáxia muito distante.
-Curso Engenharia da Computação - CIn
+# Em uma galáxia muito muito distante...
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Há muito tempo, em uma galáxia muito muito distante, chamada CIn-UFPE, a resistência luta contra o Império Galáctico, escapando de asteróides e coletando droids para ajudar nas suas missões.
+
+Engenharia da Computação, CIn - UFPE  
 Membros:
 
+- Ana Cecília Estelita Costa <acec>
+- Edson Oliveira da Silva <eos>
+- Gabriel Vitor Velozo Pereira da Silva <gvvps>
+- Geovana Pereira de Santana Soares <gpss>
 - Maria José Barbosa Mendes <mjbm>
 - Vyvian Hiara Patricio de Freitas <vhpf>
-- Ana Cecília Estelita Costa <acec>
-- Gabriel Vitor Velozo Pereira da Silva <gvvps>
-- Edson Oliveira da Silva <eos>
-- Geovana Pereira de Santana Soares <gpss>
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Galeria de Fotos:
-<img width="1920" height="1080" alt="{9F3732E3-EA11-4DAF-8CD5-9E36E723CEC0}" src="https://github.com/user-attachments/assets/2c936a8e-1dac-4987-bdcd-9d2f3ee35707" />
-<img width="1920" height="1080" alt="{653647FC-CCB4-455B-BB9E-B24FECD8F22D}" src="https://github.com/user-attachments/assets/b70580da-1edf-498c-8fda-7bb47f770530" />
-<img width="1920" height="1080" alt="{5DC58F67-BEF9-4533-95D2-CBA296AA1C3B}" src="https://github.com/user-attachments/assets/ce62c86c-f4fc-4cb8-96c6-c99f7d144fc6" />
-<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/6c96f3b0-0d63-44e1-b10a-3c9e42bd84b4" />
+**Instruções de Instalação:**
+1) Baixe o **Python 3.x** na sua máquina  
+   [python.org](https://www.python.org/)
+2) Abra o terminal e baixe a biblioteca do Pygame, seguindo o comando:
+   ```bash
+   pip install pygame
+   ```
+3) Baixe o repositório na Área de Trabalho e extraia toda a pasta
+4) Rode o jogo, seguindo o comando:
+   ```bash
+   python Main.py
+   ```
+**Instruções do Jogo:**
+1) Para mover a nave, pressione (⭠ e ⭢) ou (A e D)  
+2) Para atirar, pressione ESPAÇO
+3) O objetivo é fugir ou destruir os asteróides, enquanto coleta o máximo de estrelas e droids possível
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Bibliotecas usadas:
-- ''Random''
-- ''Pygame''
+**Galeria de Fotos:**
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/2c936a8e-1dac-4987-bdcd-9d2f3ee35707" width="100%" alt="Tela Inicial">
+  <br><br>
+  <img src="https://github.com/user-attachments/assets/b70580da-1edf-498c-8fda-7bb47f770530" width="100%" alt="Introdução">
+  <br><br>
+  <img src="https://github.com/user-attachments/assets/ce62c86c-f4fc-4cb8-96c6-c99f7d144fc6" width="100%" alt="Gameplay 1">
+  <br><br>
+  <img src="https://github.com/user-attachments/assets/a7523dad-2f4d-4058-a35c-7e86f79cf120" width="100%" alt="Gameplay 2">
+  <br><br>
+  <img src="https://github.com/user-attachments/assets/6c96f3b0-0d63-44e1-b10a-3c9e42bd84b4" width="100%" alt="Game Over">
+</p>
 
-No geral, apenas a biblioteca ''Random'' foi utilizada para definir a posição de onde os asteróides apareceriam no topo da tela e fazer a escolha de seus respectivos tamanhos.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Estrutura do código:
+**Arquitetura do Projeto:**  
 
-- O código inicialmente começa na main, onde ele vai puxar a função ''TelaInicial'' que mostrará a tela inicial do jogo, na tela inicial, ao apertar enter, a tela inicial será fechada e a tela e o jogo será gerado. Na classe ''fundo'' chamada na Main é dado a tela do jogo, onde terá a formação das estrelas, a imagem de fundo e a música. Em seguida, os objetos principais serão carregados no código, sendo a classe ''Nave'' juntamente da definição ''atirar'' e os asteróides, no qual a nave poderá se mexer com A e D e as setas pros lados e atirar com a barra de espaço.
-- Ao decorrer da main, os coletáveis serão feitos e seus respectivos sons serão atribuídos a cada, onde os coletáveis vão ser considerados num contador que dirá o placar no jogo no canto superior esquerdo, sendo R2D2, C3PO e estrelas.
-- Quando a nave colidir com um asteróide, a definição de ''gameover'' será ativada, onde vai mostrar a tela de game over que reiniciará todo o código para o jogador tentar novamente do zero.
+**Lógica e Funcionamento do Jogo**   
+O fluxo principal inicia-se no arquivo Main.py, que invoca a função TelaInicial. Ao pressionar a tecla Enter, o menu é encerrado e a partida é inicializada. O cenário é gerenciado pela classe Fundo, responsável pela renderização das estrelas, do background e da trilha sonora.
 
-Pontos adicionais sobre o código:
+Os objetos principais são carregados sequencialmente: a classe Nave (com controles via A/D ou setas e disparos pela barra de Espaço) e os obstáculos. Durante a execução, itens coletáveis (R2D2, C3PO e Estrelas) surgem com sons personalizados e alimentam um placar exibido no canto superior esquerdo. Caso a nave colida com um asteroide, a função gameover é ativada, exibindo a tela de encerramento e permitindo o reinício do ciclo.
 
-- O código possui um sistema de ''intervalos'' para os coletáveis e para os asteróides, e no caso dos asteróides, cada asteróide tem 3 variações, o grande, médio e pequeno. Quanto maior, maior a vida, menor a velocidade. Quanto menor, menor a vida, maior a velocidade. O código escolherá o código aleatóriamente usando da função ''Randint'' da biblioteca Random, e o randint também juntamente fará o asteróide aparecer numa localização aleatória no topo da tela. Os asteróides possuem porcentagens de serem escolhidos, sendo respectivamente pro menor do maior: 70% pequeno, 20% médio, 10% grande
-- No caso dos coletáveis, alguns coletáveis tem um tempo onde eles vão spawnar, sendo o menos raro a estrela e o mais raro o R2D2.
+**Mecânicas e Geração Aleatória**  
+O jogo utiliza um sistema de intervalos para o surgimento (spawn) de elementos, baseado na biblioteca random:  
+- Asteroides: Utilizam a função randint para definir uma posição aleatória no topo da tela. Existem três variações com atributos inversamente proporcionais:  
+  - Pequeno (70% de chance): Alta velocidade e baixa durabilidade.  
+  - Médio (20% de chance): Atributos equilibrados.  
+  - Grande (10% de chance): Baixa velocidade e alta durabilidade.  
+
+- Coletáveis: Possuem taxas de raridade distintas baseadas em tempo; a Estrela é o item mais frequente, enquanto o R2D2 é o mais raro.
+
+**Diagrama da Arquitetura do Jogo**
+```
+Jogo-IP
+|
+|-- Main.py (Loop principal, Gerenciamento de Estados e Eventos)
+|
+|-- Objetos/ (Classes dos Objetos)
+|   |-- Nave.py       (Movimentação e lógica de tiro)
+|   |-- Asteroides.py (Obstáculos com sistema de vida)
+|   |-- Estrela.py    (Item coletável - Pontuação)
+|   |-- c3po.py       (Item coletável - Especial)
+|   |-- r2d2.py       (Item coletável - Especial)
+|
+|-- Tela/ (Interfaces do Usuário)
+|   |-- Telainicial.py  (Controle do Menu, Música de entrada e Start)
+|   |-- TelaGameOver.py (Feedback de derrota e Pontuação final)
+|
+|-- Aspectos/ (Componentes Visuais de Fundo)
+|   |-- FundoJogo.py (Background)
+|
+|-- Sons/ (Recursos de Áudio)
+|   |-- Lyoda.mp3 (Voz inicial)
+|   |-- Impacto.wav (Som das Colisões)
+|   |-- happy world with mochi.mp3 (Música de Fundo)
+|
+|-- Sprites/ (Visuais - PNG)
+    |-- nave.png 
+    |-- estrela.png
+    |-- asteroide.png
+    |-- r2d2.png
+    |-- c3po.png
+```
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Funções do grupo:
+**Bibliotecas utilizadas:**
+- "Random"
+- "Pygame"
 
-==== Base do jogo ====
+A biblioteca "Random" foi utilizada para definição dos tamanhos e das posições iniciais dos asteróides na tela (no eixo X).
 
-Feita por Vyvian Hiara e Edson Oliveira.
-- Vyvian planejou o jogo, deu a ideia e fez os protótipos, enquanto Edson poliu a base do jogo.
-
-==== Coletáveis ====
-  
-Feito majoritariamente por Ana Cecília com ajuda de Maria José na configuração dos coletáveis e fazer os testes necessários.
-
-=== Ajustes e Design ===
-
-Os sprites e o Design do jogo foi feito majoritariamente por Geovana e Gabriel.
-- Além da música ter sido Geovana quem foi a responsável, enquanto na maioria da parte Gabriel fez o design.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Conceitos aplicados da disciplina de introdução à programação:
 
-Uso de variáveis, laços de repetição, listas, condicionais, programação orientada a objetos(classes), tupla e funções.
+**Divisão de Trabalho**  
+
+| Membros | Responsabilidade | Atividades Principais |
+| :--- | :--- | :--- |
+| **Ana Cecília** | Coletáveis, Telas e Sons | Desenvolvimento e implementação da lógica e sprites dos coletáveis, sprites das telas iniciais e áudio inicial|
+| **Edson** | Base do Jogo, Asteróides e Sons | Polimento da base do jogo, desenvolvimento e implementação da lógica e sprites dos asteróides, implementação do áudio inicial e das colisões |
+| **Gabriel** | Design | Design visual da interface |  
+| **Geovana** | Ajustes, Música e Sons | Ajustes de tela, implementação dos efeitos sonoros e música de fundo do jogo |    
+| **Maria José** | Coletáveis e Testes | Configurações extras dos coletáveis, testes |    
+| **Vyvian** | Ideação e Base do Jogo | Ideação do formato do jogo e prototipação do funcionamento |    
+
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Desafios e erros:
+**Conceitos aplicados da disciplina de introdução à programação:**  
 
-- Um dos maiores erros cometidos no projeto foi o manejo das telas. Tentamos fazer o jogo reiniciar quando dava game over, mas simplesmente não conseguimos reiniciar o jogo de forma lisa. Além disso, descobrimos que o maior problema foi não ter deixado a main do jogo numa classe ou função. O maior desafio foi a parte criativa, pensar como o jogo iria ser e desenvolve-lo. E, o manejo de tempo para colocar tudo em uma ideia durante um período curto de tempo foi um desafio. Por fim, as lições aprendidas é que criar um jogo é muito maneiro, se tiver paciência e vigor, dá para fazer algo bem legal, e no fim a cadeira de IP nos preparou bastante para fazer esse protótipo.
+| Conceito | Aplicação Prática no Projeto |
+| :--- | :--- |
+| **Variáveis** | Controle de pontuação, armazenamento da vida dos asteroides e configurações de velocidade. |
+| **Laços de Repetição** | O loop `while` mantém o jogo rodando e o `for` percorre as listas de objetos para atualizar a tela. |
+| **Listas** | Gerenciamento de sprites (tiros e asteroides) que aparecem simultaneamente. |
+| **Condicionais (`if/else`)** | Verificação de comandos do teclado e lógica de probabilidades (70%, 20%, 10%) para os tipos de asteroides. |
+| **POO (Classes)** | Organização do código em classes (`Nave`, `Asteroides`, `Coletáveis`), permitindo que cada objeto tenha seus próprios atributos. |
+| **Tuplas** | Definição de cores em formato RGB e coordenadas de posição que não mudam durante o processamento. |
+| **Funções** | Modularização de tarefas específicas, como a função `atirar()`, `TelaInicial()` e `gameover()`. |
 
-- ''Thats all, folks.''
-- Edson Oliveira
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Erros:  
+O maior erro foi o gerenciamento das telas.Tentamos fazer o jogo reiniciar liso após o Game Over, mas sem sucesso. Percebemos tarde que o problema era não ter estruturado a Main dentro de uma função ou classe específica, o que dificultou "limpar" o jogo para começar do zero
+
+Desafios:  
+O maior desafio foi a parte criativa e o tempo. Conciliar a complexidade do desenvolvimento com o prazo foi desafiador e precisamos desistir de algumas implementações para priorizar tarefas mais necessárias
+
+Lições Aprendidas:  
+A principal lição foi que criar um jogo é uma experiência construtiva e divertida, mas exige paciência e resiliência. Vimos que, com dedicação, é possível fazer um bom projeto e que tudo o que aprendemos na disciplina de IP serviu como uma base para a construção desse protótipo.
+
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
