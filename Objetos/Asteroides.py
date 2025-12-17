@@ -4,14 +4,13 @@ import random
 class Asteroide(pygame.sprite.Sprite):
     def __init__(self, largura_tela, altura_tela, tela):
         super().__init__()
-
-        # Carrega a sprite (usa a do Alien como asteroide)
+        
         self.image = pygame.image.load(
             "Sprites/Alien.png"
         ).convert_alpha()
 
         tamanhos = ["pequeno", "medio", "grande"]
-        pesos = [0.9, 0.2, 0.1]  # 60% pequeno, 30% médio, 10% grande
+        pesos = [0.7, 0.2, 0.1] 
         self.tamanho = random.choices(tamanhos, pesos)[0]
 
         if self.tamanho == "pequeno":
@@ -51,6 +50,7 @@ class Asteroide(pygame.sprite.Sprite):
 
     def fora_da_tela(self):
         return self.rect.top > self.altura_tela
+
 
 
 
