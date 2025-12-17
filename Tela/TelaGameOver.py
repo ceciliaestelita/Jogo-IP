@@ -7,6 +7,9 @@ def Game_Over(tela, largura, altura):
 
     clock = pygame.time.Clock()
 
+    GameOver = pygame.mixer.Sound("Sons/Gameover.mp3")
+    GameOver.play()
+
     tempo_inicio = pygame.time.get_ticks() 
     tempo_espera = 1500
 
