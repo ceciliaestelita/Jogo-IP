@@ -4,6 +4,9 @@ from Aspectos.FundoJogo import Fundo
 from Objetos.Asteroides import Asteroide
 from Tela.Telainicial import Mostrar_tela_inicial
 from Tela.TelaGameOver import Game_Over
+from Objetos.Estrela import Estrela
+from Objetos.c3po import C3PO
+from Objetos.r2d2 import R2D2
 import sys
 
 # ---------------------------------------------------------------------------
@@ -28,11 +31,29 @@ nave = Nave(LARGURA // 2, ALTURA)
 grupo_nave = pygame.sprite.Group(nave)
 grupo_tiros = pygame.sprite.Group()
 Grupoasteroides = pygame.sprite.Group()
+grupo_estrela = pygame.sprite.Group()
+grupo_c3po = pygame.sprite.Group()
+grupo_r2d2 = pygame.sprite.Group()
+# ---------------------------------------------------------------------------
 
 TempoAsteroide = pygame.USEREVENT + 1
 pygame.time.set_timer(TempoAsteroide, 500)
 
+TempoEstrela = pygame.USEREVENT + 2
+pygame.time.set_timer(TempoEstrela, 500)
+
+TempoC3PO = pygame.USEREVENT + 3
+pygame.time.set_timer(TempoC3PO, 500)
+
+TempoR2D2 = pygame.USEREVENT + 4
+pygame.time.set_timer(TempoR2D2, 500)
+
 # ---------------------------------------------------------------------------
+quantidade_estrelas = 0
+quantidade_c3po = 0
+quantidade_r2d2 = 0
+# ---------------------------------------------------------------------------
+
 # Main loop
 clock = pygame.time.Clock()
 rodando = True
@@ -42,16 +63,41 @@ while rodando:
             rodando = False
         if event.type == TempoAsteroide:
             Grupoasteroides.add(Asteroide(LARGURA, ALTURA, tela))
+        if event.type == TempoEstrela:
+            nova_estrela = Estrela(LARGURA, ALTURA, tela)
+            grupo_estrela.add(nova_estrela)
+        if event.type == TempoC3PO:
+            nova_c3po = C3PO(LARGURA, ALTURA, tela)
+            grupo_c3po.add(nova_c3po)
+        if event.type == TempoR2D2:
+            nova_r2d2 = R2D2(LARGURA, ALTURA, tela)
+            grupo_r2d2.add(nova_r2d2)
 
     fundo.desenhar()
     grupo_nave.draw(tela)
     grupo_tiros.draw(tela)
     Grupoasteroides.draw(tela)
+    grupo_estrela.draw(tela)
+    grupo_c3po.draw(tela)
+    grupo_r2d2.draw(tela)
+
+    # Placar é desenhado a cada frame ---
+    fonte = pygame.font.Font(None, 36)
+    texto_estrelas = fonte.render(f"Estrelas: {quantidade_estrelas}", True, (255, 255, 255))
+    texto_c3po = fonte.render(f"C3PO: {quantidade_c3po}", True, (255, 255, 0))
+    texto_r2d2 = fonte.render(f"R2D2: {quantidade_r2d2}", True, (0, 255, 255))
+    tela.blit(texto_c3po, (10, 50))
+    tela.blit(texto_r2d2, (10, 90))
+    tela.blit(texto_estrelas, (10, 10))
+    # ------------------------------------------------------
 
     teclas = pygame.key.get_pressed()
     grupo_nave.update(teclas)
     grupo_tiros.update()
     Grupoasteroides.update()
+    grupo_estrela.update()
+    grupo_c3po.update()
+    grupo_r2d2.update()
 
     if teclas[pygame.K_SPACE]:
         nave.atirar(grupo_tiros)
@@ -65,10 +111,29 @@ while rodando:
         som_impacto.play()
         if asteroide.vida <= 0:
             asteroide.kill()
-
+        
+    # Colisão nave x estrela (Coleta) ---
+    colisoes_estrela = pygame.sprite.spritecollide(nave, grupo_estrela, True)
+    for estrela in colisoes_estrela:
+        estrela.kill() # Remove a estrela da tela
+        quantidade_estrelas += 1 # Incrementa o contador
+    # ----------------------------------------------
+    # Colisão nave x c3po (Coleta) ---
+    colisoes_c3po = pygame.sprite.spritecollide(nave, grupo_c3po, True)
+    for c3po in colisoes_c3po:
+        c3po.kill() # Remove o c3po da tela
+        quantidade_c3po += 1 # Incrementa o contador
+    # ----------------------------------------------# Colisão nave x estrela (Coleta) ---
+    colisoes_r2d2 = pygame.sprite.spritecollide(nave, grupo_r2d2, True)
+    for r2d2 in colisoes_r2d2:
+        r2d2.kill() # Remove o r2d2 da tela
+        quantidade_r2d2 += 1 # Incrementa o contador
+    # ----------------------------------------------
+        
     pygame.display.flip()
     clock.tick(60)
 
+    # Colisão nave x asteroide (Permanece para Game Over)
     colisoes = pygame.sprite.spritecollide(nave, Grupoasteroides, True)
     for asteroide in colisoes:
         asteroide.kill()
