@@ -6,7 +6,7 @@ class Asteroide(pygame.sprite.Sprite):
         super().__init__()
         
         self.image = pygame.image.load(
-            "Sprites/Alien.png"
+            "Sprites/Asteroide.png"
         ).convert_alpha()
 
         tamanhos = ["pequeno", "medio", "grande"]
@@ -50,6 +50,7 @@ class Asteroide(pygame.sprite.Sprite):
 
     def fora_da_tela(self):
         return self.rect.top > self.altura_tela
+
 
 
 
