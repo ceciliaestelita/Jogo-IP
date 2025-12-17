@@ -75,6 +75,8 @@ while rodando:
             nova_r2d2 = R2D2(LARGURA, ALTURA, tela)
             grupo_r2d2.add(nova_r2d2)
 
+    # ---------------------------------------------- 
+
     fundo.desenhar()
     grupo_nave.draw(tela)
     grupo_tiros.draw(tela)
@@ -83,7 +85,8 @@ while rodando:
     grupo_c3po.draw(tela)
     grupo_r2d2.draw(tela)
 
-    # Placar é desenhado a cada frame ---
+    # ---------------------------------------------- 
+
     fonte = pygame.font.Font(None, 36)
     texto_estrelas = fonte.render(f"Estrelas: {quantidade_estrelas}", True, (255, 255, 255))
     texto_c3po = fonte.render(f"C3PO: {quantidade_c3po}", True, (255, 255, 0))
@@ -113,31 +116,28 @@ while rodando:
         som_impacto.play()
         if asteroide.vida <= 0:
             asteroide.kill()
-        
-    # Colisão nave x estrela (Coleta) ---
+    # ----------------------------------------------
+    # Colisão nave x estrela ---
     colisoes_estrela = pygame.sprite.spritecollide(nave, grupo_estrela, True)
     for estrela in colisoes_estrela:
         estrela.kill() # Remove a estrela da tela
         quantidade_estrelas += 1 # Incrementa o contador
         som_estrela_obtida.play()
-    # ----------------------------------------------
-    # Colisão nave x c3po (Coleta) ---
+    # ----- x -------
+    # Colisão nave x c3po ---
     colisoes_c3po = pygame.sprite.spritecollide(nave, grupo_c3po, True)
     for c3po in colisoes_c3po:
         c3po.kill() # Remove o c3po da tela
         quantidade_c3po += 1 # Incrementa o contador
         C3PO_obtido.play()
-    # ----------------------------------------------# Colisão nave x estrela (Coleta) ---
+    # ----- x -------
+    # Colisão nave x estrela ---
     colisoes_r2d2 = pygame.sprite.spritecollide(nave, grupo_r2d2, True)
     for r2d2 in colisoes_r2d2:
         r2d2.kill() # Remove o r2d2 da tela
         quantidade_r2d2 += 1 # Incrementa o contador
-    # ----------------------------------------------
-        
-    pygame.display.flip()
-    clock.tick(60)
-
-    # Colisão nave x asteroide (Permanece para Game Over)
+    # ----- x -------
+    # Colisão nave x asteroide ---
     colisoes = pygame.sprite.spritecollide(nave, Grupoasteroides, True)
     for asteroide in colisoes:
         asteroide.kill()
@@ -145,8 +145,8 @@ while rodando:
         Game_Over(tela, LARGURA, ALTURA)
         pygame.quit()
         sys.exit()
+    # ---------------------------------------------- 
+    pygame.display.flip()
+    clock.tick(60)
 
 pygame.quit()
-
-
-
