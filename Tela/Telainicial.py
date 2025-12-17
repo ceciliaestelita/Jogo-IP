@@ -17,12 +17,12 @@ def Mostrar_tela_inicial(tela, largura, altura):
                 pygame.quit()
                 sys.exit()
             if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_RETURN:  # Enter para iniciar
-                    esperando = False
+                esperando = False
 
         tela.blit(tela_inicial_img, (0, 0))
         pygame.display.flip()
         clock.tick(60)
+
 
 
 
