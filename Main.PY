@@ -22,6 +22,8 @@ Mostrar_tela_inicial(tela, LARGURA, ALTURA)
 # ---------------------------------------------------------------------------
 # Sons
 som_impacto = pygame.mixer.Sound("Sons/Impacto.wav")
+som_estrela_obtida = pygame.mixer.Sound("Sons/Estrelasom.mp3")
+C3PO_obtido = pygame.mixer.Sound("Sons/C3POsom.mp3")
 # ---------------------------------------------------------------------------
 # Chamada do fundo e da nave
 fundo = Fundo(tela, LARGURA, ALTURA)
@@ -117,12 +119,14 @@ while rodando:
     for estrela in colisoes_estrela:
         estrela.kill() # Remove a estrela da tela
         quantidade_estrelas += 1 # Incrementa o contador
+        som_estrela_obtida.play()
     # ----------------------------------------------
     # Colisão nave x c3po (Coleta) ---
     colisoes_c3po = pygame.sprite.spritecollide(nave, grupo_c3po, True)
     for c3po in colisoes_c3po:
         c3po.kill() # Remove o c3po da tela
         quantidade_c3po += 1 # Incrementa o contador
+        C3PO_obtido.play()
     # ----------------------------------------------# Colisão nave x estrela (Coleta) ---
     colisoes_r2d2 = pygame.sprite.spritecollide(nave, grupo_r2d2, True)
     for r2d2 in colisoes_r2d2:
@@ -143,5 +147,6 @@ while rodando:
         sys.exit()
 
 pygame.quit()
+
 
 
