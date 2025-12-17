@@ -46,7 +46,7 @@ TempoC3PO = pygame.USEREVENT + 3
 pygame.time.set_timer(TempoC3PO, 5000)
 
 TempoR2D2 = pygame.USEREVENT + 4
-pygame.time.set_timer(TempoR2D2, 5000)
+pygame.time.set_timer(TempoR2D2, 7000)
 # ---------------------------------------------------------------------------
 quantidade_estrelas = 0
 quantidade_c3po = 0
@@ -142,4 +142,5 @@ while rodando:
     clock.tick(60)
 
 pygame.quit()
+
 
