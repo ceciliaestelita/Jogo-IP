@@ -17,8 +17,9 @@ Galeria de Fotos:
 <img width="1920" height="1080" alt="{5DC58F67-BEF9-4533-95D2-CBA296AA1C3B}" src="https://github.com/user-attachments/assets/ce62c86c-f4fc-4cb8-96c6-c99f7d144fc6" />
 <img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/6c96f3b0-0d63-44e1-b10a-3c9e42bd84b4" />
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Galerias usadas:
+Bibliotecas usadas:
 - ''Random''
+- ''Pygame''
 
 No geral, apenas a biblioteca ''Random'' foi utilizada para definir a posição de onde os asteróides apareceriam no topo da tela e fazer a escolha de seus respectivos tamanhos.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
