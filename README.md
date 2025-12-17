@@ -23,6 +23,17 @@ Bibliotecas usadas:
 
 No geral, apenas a biblioteca ''Random'' foi utilizada para definir a posição de onde os asteróides apareceriam no topo da tela e fazer a escolha de seus respectivos tamanhos.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Estrutura do código:
+
+- O código inicialmente começa na main, onde ele vai puxar a função ''TelaInicial'' que mostrará a tela inicial do jogo, na tela inicial, ao apertar enter, a tela inicial será fechada e a tela e o jogo será gerado. Na classe ''fundo'' chamada na Main é dado a tela do jogo, onde terá a formação das estrelas, a imagem de fundo e a música. Em seguida, os objetos principais serão carregados no código, sendo a classe ''Nave'' juntamente da definição ''atirar'' e os asteróides, no qual a nave poderá se mexer com A e D e as setas pros lados e atirar com a barra de espaço.
+- Ao decorrer da main, os coletáveis serão feitos e seus respectivos sons serão atribuídos a cada, onde os coletáveis vão ser considerados num contador que dirá o placar no jogo no canto superior esquerdo, sendo R2D2, C3PO e estrelas.
+- Quando a nave colidir com um asteróide, a definição de ''gameover'' será ativada, onde vai mostrar a tela de game over que reiniciará todo o código para o jogador tentar novamente do zero.
+
+Pontos adicionais sobre o código:
+
+- O código possui um sistema de ''intervalos'' para os coletáveis e para os asteróides, e no caso dos asteróides, cada asteróide tem 3 variações, o grande, médio e pequeno. Quanto maior, maior a vida, menor a velocidade. Quanto menor, menor a vida, maior a velocidade. O código escolherá o código aleatóriamente usando da função ''Randint'' da biblioteca Random, e o randint também juntamente fará o asteróide aparecer numa localização aleatória no topo da tela. Os asteróides possuem porcentagens de serem escolhidos, sendo respectivamente pro menor do maior: 70% pequeno, 20% médio, 10% grande
+- No caso dos coletáveis, alguns coletáveis tem um tempo onde eles vão spawnar, sendo o menos raro a estrela e o mais raro o R2D2.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Funções do grupo:
 
 ==== Base do jogo ====
