@@ -2,8 +2,6 @@ import pygame
 import random
 
 class Asteroide(pygame.sprite.Sprite):
-    """Asteroide que cai do topo da tela"""
-
     def __init__(self, largura_tela, altura_tela, tela):
         super().__init__()
 
@@ -12,8 +10,6 @@ class Asteroide(pygame.sprite.Sprite):
             "Sprites/Alien.png"
         ).convert_alpha()
 
-        # Escala opcional (ajuste se quiser)
-        # Tamanho do asteroide
         tamanhos = ["pequeno", "medio", "grande"]
         pesos = [0.9, 0.2, 0.1]  # 60% pequeno, 30% médio, 10% grande
         self.tamanho = random.choices(tamanhos, pesos)[0]
@@ -55,6 +51,7 @@ class Asteroide(pygame.sprite.Sprite):
 
     def fora_da_tela(self):
         return self.rect.top > self.altura_tela
+
 
 
 
