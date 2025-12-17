@@ -4,9 +4,9 @@ from Aspectos.FundoJogo import Fundo
 from Objetos.Asteroides import Asteroide
 from Tela.Telainicial import Mostrar_tela_inicial
 from Tela.TelaGameOver import Game_Over
-from Objetos.Estrela import Estrela
-from Objetos.c3po import C3PO
-from Objetos.r2d2 import R2D2
+from Objetos.Coletáveis.Estrela import Estrela
+from Objetos.Coletáveis.c3po import C3PO
+from Objetos.Coletáveis.r2d2 import R2D2
 import sys
 
 # ---------------------------------------------------------------------------
@@ -143,3 +143,4 @@ while rodando:
         sys.exit()
 
 pygame.quit()
+
