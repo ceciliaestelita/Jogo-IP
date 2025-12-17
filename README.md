@@ -43,7 +43,7 @@ Uso de variáveis, laços de repetição, listas, condicionais, programação or
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Desafios e erros:
 
-- Um dos maiores erros cometidos no projeto foi o jeito ''mal'' de ter feito o manejo das telas. Tentamos e tentamos fazer o jogo reiniciar quando dava game over mas simplesmente não conseguimos encontrar uma forma de reiniciar o jogo de forma lisa, no fim descobrimos que o maior problema era justamente em relação a não ter deixado a main do jogo numa classe ou função, e acho que esse foi o maior erro do projeto. O maior desafio era a parte criativa mesmo, pensar o jeito que o jogo ia ser e desenvolver, no fim fazer o jogo foi bem produtivo e divertido. E as lições aprendidas é que criar um jogo é muito maneiro, se tiver paciência e vigor, dá para fazer algo bem legal, e no fim a cadeira de IP nos preparou bastante para fazer esse protótipo.
+- Um dos maiores erros cometidos no projeto foi o manejo das telas. Tentamos fazer o jogo reiniciar quando dava game over, mas simplesmente não conseguimos reiniciar o jogo de forma lisa. Além disso, descobrimos que o maior problema foi não ter deixado a main do jogo numa classe ou função. O maior desafio foi a parte criativa, pensar como o jogo iria ser e desenvolve-lo. E, o manejo de tempo para colocar tudo em uma ideia durante um período curto de tempo foi um desafio. Por fim, as lições aprendidas é que criar um jogo é muito maneiro, se tiver paciência e vigor, dá para fazer algo bem legal, e no fim a cadeira de IP nos preparou bastante para fazer esse protótipo.
 
 - ''Thats all, folks.''
 - Edson Oliveira
