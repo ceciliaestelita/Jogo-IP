@@ -1,4 +1,4 @@
-# Em uma galáxia muito muito distante...
+# Em uma galáxia muito muito distante... 🌌🚀
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Há muito tempo, em uma galáxia muito muito distante, chamada CIn-UFPE, a resistência luta contra o Império Galáctico, escapando de asteróides e coletando droids para ajudar nas suas missões.
 
