@@ -22,8 +22,3 @@ def Mostrar_tela_inicial(tela, largura, altura):
         tela.blit(tela_inicial_img, (0, 0))
         pygame.display.flip()
         clock.tick(60)
-
-
-
-
-
