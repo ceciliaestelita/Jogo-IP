@@ -1,4 +1,5 @@
 import pygame
+import sys
 from Objetos.Nave import Nave
 from Aspectos.FundoJogo import Fundo
 from Objetos.Asteroides import Asteroide
@@ -7,8 +8,6 @@ from Tela.TelaGameOver import Game_Over
 from Objetos.Coletáveis.Estrela import Estrela
 from Objetos.Coletáveis.c3po import C3PO
 from Objetos.Coletáveis.r2d2 import R2D2
-import sys
-
 # ---------------------------------------------------------------------------
 pygame.init()
 info = pygame.display.Info()
@@ -37,7 +36,6 @@ grupo_estrela = pygame.sprite.Group()
 grupo_c3po = pygame.sprite.Group()
 grupo_r2d2 = pygame.sprite.Group()
 # ---------------------------------------------------------------------------
-
 TempoAsteroide = pygame.USEREVENT + 1
 pygame.time.set_timer(TempoAsteroide, 500)
 
@@ -49,7 +47,6 @@ pygame.time.set_timer(TempoC3PO, 5000)
 
 TempoR2D2 = pygame.USEREVENT + 4
 pygame.time.set_timer(TempoR2D2, 5000)
-
 # ---------------------------------------------------------------------------
 quantidade_estrelas = 0
 quantidade_c3po = 0
@@ -74,9 +71,7 @@ while rodando:
         if event.type == TempoR2D2:
             nova_r2d2 = R2D2(LARGURA, ALTURA, tela)
             grupo_r2d2.add(nova_r2d2)
-
     # ---------------------------------------------- 
-
     fundo.desenhar()
     grupo_nave.draw(tela)
     grupo_tiros.draw(tela)
@@ -84,9 +79,7 @@ while rodando:
     grupo_estrela.draw(tela)
     grupo_c3po.draw(tela)
     grupo_r2d2.draw(tela)
-
     # ---------------------------------------------- 
-
     fonte = pygame.font.Font(None, 36)
     texto_estrelas = fonte.render(f"Estrelas: {quantidade_estrelas}", True, (255, 255, 255))
     texto_c3po = fonte.render(f"C3PO: {quantidade_c3po}", True, (255, 255, 0))
@@ -95,7 +88,6 @@ while rodando:
     tela.blit(texto_r2d2, (10, 90))
     tela.blit(texto_estrelas, (10, 10))
     # ------------------------------------------------------
-
     teclas = pygame.key.get_pressed()
     grupo_nave.update(teclas)
     grupo_tiros.update()
@@ -150,3 +142,4 @@ while rodando:
     clock.tick(60)
 
 pygame.quit()
+
