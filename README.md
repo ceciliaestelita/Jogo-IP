@@ -3,12 +3,12 @@ Curso Engenharia da Computação - CIn
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Membros:
 
-Maria José Barbosa Mendes <mjbm>
-Vyvian Hiara Patricio de Freitas <vhpf>
-Ana Cecília Estelita Costa <acec>
-Gabriel Vitor Velozo Pereira da Silva <gvvps>
-Edson Oliveira da Silva <eos>
-Geovana Pereira de Santana Soares <gpss>
+- Maria José Barbosa Mendes <mjbm>
+- Vyvian Hiara Patricio de Freitas <vhpf>
+- Ana Cecília Estelita Costa <acec>
+- Gabriel Vitor Velozo Pereira da Silva <gvvps>
+- Edson Oliveira da Silva <eos>
+- Geovana Pereira de Santana Soares <gpss>
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Galeria de Fotos:
