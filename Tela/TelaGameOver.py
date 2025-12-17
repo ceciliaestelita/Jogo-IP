@@ -13,7 +13,9 @@ def Game_Over(tela, largura, altura):
     tempo_inicio = pygame.time.get_ticks() 
     tempo_espera = 1500
 
-    while True:  # Loop infinito até o jogador apertar algo
+    GameOverLoop = True
+
+    while GameOverLoop:  # Loop infinito até o jogador apertar algo
         tempo_atual = pygame.time.get_ticks()
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -21,10 +23,8 @@ def Game_Over(tela, largura, altura):
                 sys.exit()
             if event.type == pygame.KEYDOWN:
                 if tempo_atual - tempo_inicio > tempo_espera:
-                # Qualquer tecla fecha o jogo
-                    pygame.quit()
-                    sys.exit()
-
+                    GameOverLoop = False
+                    
         tela.blit(tela_img, (0, 0))
         pygame.display.flip()
         clock.tick(60)
