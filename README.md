@@ -39,7 +39,7 @@ Os sprites e o Design do jogo foi feito majoritariamente por Geovana e Gabriel.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Conceitos aplicados da disciplina de introdução à programação:
 
-Uso de variáveis, laços de repetição, listas, condicionais, programação orientada a objetos(classes), tupla, funções.
+Uso de variáveis, laços de repetição, listas, condicionais, programação orientada a objetos(classes), tupla e funções.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Desafios e erros:
 
