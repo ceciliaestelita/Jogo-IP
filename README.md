@@ -107,8 +107,8 @@ A biblioteca "Random" foi utilizada para definição dos tamanhos e das posiçõ
 
 | Membros | Responsabilidade | Atividades Principais |
 | :--- | :--- | :--- |
-| **Ana Cecília** | Coletáveis, Telas e Sons | Desenvolvimento e implementação da lógica e sprites dos coletáveis, sprites das telas iniciais e áudio inicial|
-| **Edson** | Base do Jogo, Asteróides e Sons | Polimento da base do jogo, desenvolvimento e implementação da lógica e sprites dos asteróides, implementação do áudio inicial e das colisões |
+| **Ana Cecília** | Coletáveis, Telas, Sons e Colisões | Desenvolvimento e implementação da lógica e sprites dos coletáveis, sprites das telas iniciais, implementação do áudio inicial e controle das colisões com coletáveis |
+| **Edson** | Base do Jogo, Asteróides, Sons e Colisões | Polimento da base do jogo, desenvolvimento e implementação da lógica e sprites dos asteróides, implementação do áudio inicial e das colisões com asteróides|
 | **Gabriel** | Design | Design visual da interface |  
 | **Geovana** | Ajustes, Música e Sons | Ajustes de tela, implementação dos efeitos sonoros e música de fundo do jogo |    
 | **Maria José** | Coletáveis e Testes | Configurações extras dos coletáveis, testes |    
