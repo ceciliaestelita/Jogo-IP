@@ -30,7 +30,7 @@ Feita por Vyvian Hiara e Edson Oliveira.
 
 ==== Coletáveis ====
   
-Feito majoritariamente por Ana Cecília com ajuda de Maria José que ajudou em fazer os coletáveis e fazer os testes necessários.
+Feito majoritariamente por Ana Cecília com ajuda de Maria José na configuração dos coletáveis e fazer os testes necessários.
 
 === Ajustes e Design ===
 
