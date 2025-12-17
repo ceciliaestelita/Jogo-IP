@@ -116,6 +116,7 @@ def Main():
         for estrela in colisoes_estrela:
             estrela.kill() # Remove a estrela da tela
             quantidade_estrelas += 1 # Incrementa o contador
+            som_estrela_obtida.set_volume(0.3)
             som_estrela_obtida.play()
         # ----- x -------
         # Colisão nave x c3po ---
@@ -123,6 +124,7 @@ def Main():
         for c3po in colisoes_c3po:
             c3po.kill() # Remove o c3po da tela
             quantidade_c3po += 1 # Incrementa o contador
+            C3PO_obtido.set_volume(0.3)
             C3PO_obtido.play()
         # ----- x -------
         # Colisão nave x estrela ---
@@ -130,6 +132,7 @@ def Main():
         for r2d2 in colisoes_r2d2:
             r2d2.kill() # Remove o r2d2 da tela
             quantidade_r2d2 += 1 
+            R2D2_obtido.set_volume(0.3)
             R2D2_obtido.play()
         # ----- x -------
         # Colisão nave x asteroide ---
