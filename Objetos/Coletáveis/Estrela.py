@@ -40,3 +40,4 @@ class Estrela(pygame.sprite.Sprite):
 
 
 
+
