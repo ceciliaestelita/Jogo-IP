@@ -11,13 +11,18 @@ def Mostrar_tela_inicial(tela, largura, altura):
     esperando = True
     clock = pygame.time.Clock()
 
+    tempo_inicio = pygame.time.get_ticks() 
+    tempo_espera = 2000
+
     while esperando:
         for event in pygame.event.get():
+            tempo_atual = pygame.time.get_ticks()
             if event.type == pygame.QUIT:
                 pygame.quit()
                 sys.exit()
             if event.type == pygame.KEYDOWN:
-                esperando = False
+                if tempo_atual - tempo_inicio > tempo_espera:
+                    esperando = False
 
         tela.blit(tela_inicial_img, (0, 0))
         pygame.display.flip()
