@@ -93,15 +93,15 @@ Jogo-IP
 |   |-- Gameover.mp3 (Som da tela de Game Over)
 |
 |-- Sprites/ (Visuais - PNG)
-    |-- nave.png 
-    |-- estrela.png
-    |-- asteroide.png
-    |-- r2d2.png
-    |-- c3po.png
-    |-- Tiro.png
-    |-- TelaGameOver.png
-    |-- TelaInicial.png
-    |-- Galáxia.png
+|   |-- nave.png 
+|   |-- estrela.png
+|   |-- asteroide.png
+|   |-- r2d2.png
+|   |-- c3po.png
+|   |-- Tiro.png
+|   |-- TelaGameOver.png
+|   |-- TelaInicial.png
+|   |-- Galáxia.png
 
 ```
 
