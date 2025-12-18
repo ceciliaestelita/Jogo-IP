@@ -50,6 +50,7 @@ def Main():
     TempoR2D2 = pygame.USEREVENT + 4
     pygame.time.set_timer(TempoR2D2, 7000)
     # ---------------------------------------------------------------------------
+    asteroides_derrubados = 0
     quantidade_estrelas = 0
     quantidade_c3po = 0
     quantidade_r2d2 = 0
@@ -83,12 +84,16 @@ def Main():
         grupo_r2d2.draw(tela)
         # ---------------------------------------------- 
         fonte = pygame.font.Font(None, 36)
+        Pontuação = asteroides_derrubados + (quantidade_estrelas * 10) + (quantidade_c3po * 20) + (quantidade_r2d2 * 50)
+        texto_pontuação = fonte.render(f"Pontuação: {Pontuação}", True, (0, 0, 0))
         texto_estrelas = fonte.render(f"Estrelas: {quantidade_estrelas}", True, (255, 255, 255))
         texto_c3po = fonte.render(f"C3PO: {quantidade_c3po}", True, (255, 255, 0))
         texto_r2d2 = fonte.render(f"R2D2: {quantidade_r2d2}", True, (0, 255, 255))
-        tela.blit(texto_c3po, (10, 50))
-        tela.blit(texto_r2d2, (10, 90))
-        tela.blit(texto_estrelas, (10, 10))
+        tela.blit(texto_pontuação, (10, 10))
+        tela.blit(texto_c3po, (10, 90))
+        tela.blit(texto_r2d2, (10, 130))
+        tela.blit(texto_estrelas, (10, 50))
+
         # ------------------------------------------------------
         teclas = pygame.key.get_pressed()
         grupo_nave.update(teclas)
@@ -110,6 +115,7 @@ def Main():
             som_impacto.play()
             if asteroide.vida <= 0:
                 asteroide.kill()
+                asteroides_derrubados += 1
         # ----------------------------------------------
         # Colisão nave x estrela ---
         colisoes_estrela = pygame.sprite.spritecollide(nave, grupo_estrela, True)
