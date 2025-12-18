@@ -75,7 +75,7 @@ Jogo-IP
       |   |-- Estrela.py    (Item coletável - Pontuação)
       |   |-- c3po.py       (Item coletável - Especial)
       |   |-- r2d2.py       (Item coletável - Especial)
-|
+
 |-- Tela/ (Interfaces do Usuário)
 |   |-- Telainicial.py  (Controle do Menu, Música de entrada e Start)
 |   |-- TelaGameOver.py (Feedback de derrota e Pontuação final)
