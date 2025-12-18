@@ -70,9 +70,11 @@ Jogo-IP
 |-- Objetos/ (Classes dos Objetos)
 |   |-- Nave.py       (Movimentação e lógica de tiro)
 |   |-- Asteroides.py (Obstáculos com sistema de vida)
-|   |-- Estrela.py    (Item coletável - Pontuação)
-|   |-- c3po.py       (Item coletável - Especial)
-|   |-- r2d2.py       (Item coletável - Especial)
+|   |-- Tiro.py (Classe do projétil)
+|------ Coletáveis / (Classes dos coletáveis) 
+      |   |-- Estrela.py    (Item coletável - Pontuação)
+      |   |-- c3po.py       (Item coletável - Especial)
+      |   |-- r2d2.py     (Item coletável - Especial)
 |
 |-- Tela/ (Interfaces do Usuário)
 |   |-- Telainicial.py  (Controle do Menu, Música de entrada e Start)
@@ -85,13 +87,22 @@ Jogo-IP
 |   |-- Lyoda.mp3 (Voz inicial)
 |   |-- Impacto.wav (Som das Colisões)
 |   |-- happy world with mochi.mp3 (Música de Fundo)
-|
+|   |-- R2D2som.mp3 (Som de coleta do R2D2)
+|   |-- C3POsom.mp3 (Som de coleta do C3PO)
+|   |-- Estrelasom.mp3 (Som de coleta da estrela)
+|   |-- Gameover.mp3 (Som da tela de Game Over)
+
 |-- Sprites/ (Visuais - PNG)
     |-- nave.png 
     |-- estrela.png
     |-- asteroide.png
     |-- r2d2.png
     |-- c3po.png
+    |-- Tiro.png
+    |-- TelaGameOver.png
+    |-- TelaInicial.png
+    |-- Galáxia.png
+
 ```
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
